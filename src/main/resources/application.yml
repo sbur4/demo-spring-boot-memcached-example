@@ -1,0 +1,5 @@
+memcached:
+  cache:
+    servers: memcached:11211
+    expirations: 3600
+    operation-timeout: 3000

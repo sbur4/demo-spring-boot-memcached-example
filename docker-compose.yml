@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  app:
+    image: spring-boot-memcached-demo-java
+    container_name: demo-app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+  memcached:
+    container_name: demo-memcached
+    image: memcached:alpine
+    ports:
+      - 11211:11211
